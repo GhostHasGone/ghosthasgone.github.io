@@ -333,12 +333,12 @@ header {
     .faq-container {
         gap: 12px;
     }
-    
+
     .faq-question {
         padding: 16px 18px;
         font-size: 1rem;
     }
-    
+
     .faq-question[aria-expanded="true"] + .faq-answer {
         padding: 0 18px 16px;
     }

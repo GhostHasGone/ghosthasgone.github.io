@@ -3,17 +3,19 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>itsaboutme.site — Your Story, Your Page.</title>
+    <title>ItsAboutMe.Site</title>
     <meta name="description" content="Host your own personalized About Me page for just $5 a year. Simple, modern, and yours." />
     <meta name="theme-color" content="#5865F2" />
-    <meta property="og:title" content="itsaboutme.site — Your Story, Your Page." />
-    <meta property="og:description" content="Host your own personalized About Me page!" />
+    <meta property="og:title" content="ItsAboutMe.Site - Your Story, Your Page." />
+    <meta property="og:description" content="Host your own personalized 'About Me' page!" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://itsaboutme.site" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+
 </head>
 <body>
 <div class="container">
@@ -153,44 +155,5 @@
         </div>
     </footer>
 </div>
-
-<script>
-    (function () {
-        const handle = 'ghosthasgone';
-        const copyStatus = document.getElementById('copyStatus');
-        const copyBadge = document.getElementById('copyBadge');
-        const ctaButton = document.getElementById('ctaButton');
-
-        async function copyHandle() {
-            try {
-                await navigator.clipboard.writeText(handle);
-                copyStatus.textContent = 'copied!';
-                copyStatus.style.color = getComputedStyle(document.documentElement).getPropertyValue('--success').trim() || '#22c55e';
-                setTimeout(() => {
-                    copyStatus.textContent = 'tap to copy';
-                    copyStatus.style.color = '';
-                }, 2000);
-            } catch {
-                copyStatus.textContent = handle + ' (copy manually)';
-            }
-        }
-
-        copyBadge.addEventListener('click', copyHandle);
-
-        ctaButton.addEventListener('click', async () => {
-            await copyHandle();
-            // Try to open Discord client/web
-            const discordUrl = 'discord://-/users/902924209754357850';
-            try {
-                window.open(discordUrl, '_blank', 'noopener');
-            } catch {}
-        });
-    }());
-</script>
-<noscript>
-    <div style="text-align:center;color:#9CA3AF;padding:8px 0;">
-        JavaScript is disabled. Copy Discord handle: ghosthasgone
-    </div>
-</noscript>
 </body>
 </html>
