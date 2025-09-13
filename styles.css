@@ -12,7 +12,7 @@
     --glass-blur: 18px;
     --shadow: 0 8px 32px 0 rgba(0,0,0,0.22);
     --radius: 18px;
-    --transition: 0.25s cubic-bezier(.4,2,.6,1);
+    --transition: 0.1s cubic-bezier(.4,2,.6,1);
 }
 * { box-sizing: border-box; }
 html {
@@ -43,7 +43,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 18px 0 10px;
-    animation: fadeInDown 0.8s 0.1s both;
+    animation: fadeInDown 0.9s 0.1s both;
 }
 @keyframes fadeInDown {
     from { opacity: 0; transform: translateY(-32px);}
